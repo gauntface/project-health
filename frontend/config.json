@@ -1,0 +1,24 @@
+{
+  "disableHugoGeneratorInject": true,
+  "markup": {
+     "goldmark": {
+        "renderer": {
+           "unsafe": true
+        }
+     },
+     "highlight": {
+        "codeFences": false
+     }
+  },
+
+  "baseURL": "https://www.gauntface.com/",
+  "languageCode": "en-us",
+  "title": "Gauntface | Matt Gaunt",
+  "theme": [
+     "gitbox",
+     "hopin-base-theme"
+  ],
+  "summaryLength": 45,
+
+  "params": {}
+}
