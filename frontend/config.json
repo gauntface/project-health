@@ -11,11 +11,12 @@
      }
   },
 
-  "baseURL": "https://www.gauntface.com/",
+  "baseURL": "https://sidecar.gauntface.dev",
   "languageCode": "en-us",
-  "title": "Gauntface | Matt Gaunt",
+  "title": "Sidecar by Matt Gaunt",
   "theme": [
-     "hopin-base-theme"
+    "sidecar",
+    "hopin-base"
   ],
   "summaryLength": 45,
 
