@@ -19,6 +19,8 @@
   "homepage": "https://github.com/gauntface/project-health#readme",
   "devDependencies": {
     "@gauntface/html-asset-manager": "^1.0.4",
-    "@hopin/hugo-base-theme": "0.0.322"
+    "@hopin/hugo-base-theme": "0.0.322",
+    "fs-extra": "^9.0.1",
+    "gulp": "^4.0.2"
   }
 }
