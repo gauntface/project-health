@@ -111,12 +111,9 @@ gulp.task('frontend-restart-server', async () => {
   await hugo.restartServer(projectDir, flags);
 });
 
-gulp.task('frontend-serve',
-  gulp.series(
-    'frontend-themes',
-    gulp.parallel(
-      'frontend-hugo-server',
-    ),
+gulp.task('frontend-dev-serve',
+  gulp.parallel(
+    'frontend-hugo-server',
   ),
 );
 
@@ -146,11 +143,8 @@ gulp.task('frontend-prod-browser-sync', function() {
 });
 
 gulp.task('frontend-prod-watch',
-  gulp.series(
-    'frontend-build',
-    gulp.parallel(
-      'frontend-prod-browser-sync',
-      'frontend-prod-watch-manual',
-    ),
+  gulp.parallel(
+    'frontend-prod-browser-sync',
+    'frontend-prod-watch-manual',
   ),
 );

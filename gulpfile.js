@@ -1,8 +1,7 @@
 const path = require('path');
 
 const gulp = require('gulp');
-const fs = require('fs-extra');
-const basetheme = require('@hopin/hugo-base-theme');
+
 
 require('./frontend-theme/gulp-tasks');
 require('./frontend/gulp-tasks');
@@ -15,7 +14,11 @@ gulp.task('build', gulp.series(
   'frontend-build',
 ))
 
-gulp.task('develop', gulp.parallel(
-  'frontend-theme-watch',
-  'frontend-serve',
+gulp.task('develop', gulp.series(
+  'frontend-theme-build-dev',
+  'frontend-build',
+  gulp.parallel(
+    'frontend-theme-watch',
+    'frontend-dev-serve',
+  ),
 ))

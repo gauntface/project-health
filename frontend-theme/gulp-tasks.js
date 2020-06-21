@@ -95,6 +95,7 @@ for (const wt of watchTasks) {
   gulp.task(taskName, () => {
     const opts = {
       delay: 500,
+      ignoreInitial: true,
     };
     return gulp.watch(
       [path.posix.join(themeSrc, '**', `*.${wt.ext}`)],
@@ -106,7 +107,5 @@ for (const wt of watchTasks) {
 }
 
 gulp.task('frontend-theme-watch', gulp.series(
-  setEnv('dev'),
-  'frontend-theme-perform-build',
   gulp.parallel(...watchTaskNames),
 ));
